@@ -1,0 +1,134 @@
+/* General Reset for margin and padding */
+body, h1, nav, a, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Default Light Mode Styles */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+header.light-mode {
+    background-color: #fff;
+    color: #1B1B2F;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav.light-mode {
+    display: flex;
+    align-items: center;
+}
+
+nav a.light-mode {
+    color: #1B1B2F;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a.light-mode:hover {
+    color: #f0a500;
+}
+
+.dark-mode-toggle.light-mode {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle.light-mode:hover {
+    background-color: #555;
+}
+
+/* Header styling */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 2rem;
+    color: inherit;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+header.dark-mode {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav.dark-mode a {
+    color: #fff;
+}
+
+nav.dark-mode a:hover {
+    color: #f0a500;
+}
+
+.dark-mode-toggle.dark-mode {
+    background-color: #f0a500;
+    color: #fff;
+}
+
+.dark-mode-toggle.dark-mode:hover {
+    background-color: #d88b00;
+}
+
+/* Apply Dark Mode on Button Hover */
+.dark-mode-toggle {
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: inherit;
+    margin-top: 40px;
+}

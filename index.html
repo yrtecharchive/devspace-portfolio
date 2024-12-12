@@ -3,10 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yves Rey Badan">
+    <meta name="description" content="Portfolio of Yves Rey Badan, a full-stack developer specializing in mobile and web development. Explore projects, skills, and contact details.">
+    <meta name="keywords" content="Yves Rey Badan, Full-Stack Developer, Web Developer, Mobile Developer, Portfolio, Projects, Skills">
     <title>Yves Rey Badan - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/custom-style.css">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#1a1a1a">
 </head>
 <body>
-    
-    <h1>Welcome Page</h1>
+    <header>
+        <div class="logo">
+            <!-- Default logo (light mode) -->
+            <img src="assets/images/favicon.png" alt="Yves Rey Badan's Workspace Logo" id="logoImage">
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <button class="dark-mode-toggle" id="themeToggle">Dark Mode</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome Page</h1>
+    </main>
+    <script>
+        const toggleButton = document.getElementById('themeToggle');
+        const logoImage = document.getElementById('logoImage');
+        let isDarkMode = false;
+
+        toggleButton.addEventListener('click', () => {
+            if (isDarkMode) {
+                // Change to light mode
+                document.body.style.backgroundColor = '#fff';
+                document.body.style.color = '#000';
+                toggleButton.textContent = 'Dark Mode';
+                toggleButton.style.backgroundColor = '#333';
+                toggleButton.style.color = '#fff';
+                logoImage.src = "assets/images/favicon.png"; // Use light mode logo
+            } else {
+                // Change to dark mode
+                document.body.style.backgroundColor = '#1a1a1a';
+                document.body.style.color = '#fff';
+                toggleButton.textContent = 'Light Mode';
+                toggleButton.style.backgroundColor = '#f0a500';
+                toggleButton.style.color = '#fff';
+                logoImage.src = "assets/images/logo.png"; // Use dark mode logo
+            }
+            isDarkMode = !isDarkMode;
+        });
+    </script>
 </body>
 </html>
